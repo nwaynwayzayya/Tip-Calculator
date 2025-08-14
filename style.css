@@ -1,56 +1,100 @@
+/* Reset some default styles */
 * {
     margin: 0;
     padding: 0;
-    /* box sizing border-box is good for styling the input boxes because it will calculate the extra border and space around it */
     box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 body {
-    background-color: #f2f2f2;
-    font-family: "Helvetica", sans-serif;
+    background: linear-gradient(to right, #6a11cb, #2575fc);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
 }
 
 .container {
-    background-color: white;
-    max-width: 600px;
-    margin: 100px auto;
-    padding: 20px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-    border-radius: 10px;
-}
-
-h1 {
-    margin-top: 0;
+    background-color: #ffffff;
+    padding: 30px 40px;
+    border-radius: 15px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+    max-width: 400px;
+    width: 100%;
     text-align: center;
 }
 
-input {
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    margin: 10px 0;
+h1 {
+    color: #333;
+    margin-bottom: 10px;
+}
+
+p {
+    color: #555;
+    margin-bottom: 25px;
+}
+
+label {
+    display: block;
+    text-align: left;
+    margin-bottom: 5px;
+    color: #333;
+    font-weight: 500;
+}
+
+input[type="number"] {
     width: 100%;
+    padding: 10px 15px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 16px;
+    transition: all 0.3s ease;
+}
+
+input[type="number"]:focus {
+    outline: none;
+    border-color: #2575fc;
+    box-shadow: 0 0 5px rgba(37, 117, 252, 0.5);
 }
 
 button {
-    background-color: #4caf50;
+    background-color: #2575fc;
     color: white;
-    padding: 10px;
+    padding: 12px 20px;
     border: none;
+    border-radius: 8px;
     cursor: pointer;
-    margin: 10px 0;
+    font-size: 16px;
+    transition: background 0.3s ease;
     width: 100%;
-    font-size: 18px;
-    text-transform: uppercase;
-    transition: background-color .2s ease;
+    margin-bottom: 20px;
 }
 
 button:hover {
-    background-color: #45a049;
+    background-color: #6a11cb;
 }
 
 #total {
-    font-size: 24px;
+    display: inline-block;
     font-weight: bold;
-    
+    font-size: 20px;
+    color: #2575fc;
+}
+
+/* Responsive adjustments */
+@media (max-width: 480px) {
+    .container {
+        padding: 20px;
+    }
+
+    h1 {
+        font-size: 24px;
+    }
+
+    input[type="number"], button {
+        font-size: 14px;
+        padding: 10px;
+    }
 }
